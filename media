@@ -1,0 +1,34 @@
+algoritmo "exer 8"
+// FunÃ§Ã£o : Escrever um algoritmo para armazenar valores inteiros em uma matriz
+//(5,6). A seguir, calcule a média dos valores pares contidos na matriz e
+//escreva seu conteúdo.
+// Autor :TH
+// Data :
+// SeÃ§Ã£o de DeclaraÃ§Ãµes
+var
+   M: vetor [1..5,1..6] de inteiro
+   i,j,k,D,t: inteiro
+   media: real
+inicio
+   //sessÃ£o de comandos
+   media<- 0
+   k<-1
+   D<-0
+   t<-0
+
+   para i de 1 ate 5 faca
+	 para j de 1 ate 6 faca
+	 escreva ("entre com os valores da matriz: ")
+	 leia (M[i,j])
+	   se (M[i,j] mod 2)=0 entao
+		 k<- M[i,j]
+		 D<-D+1
+		 t<-t+k
+	   fimse
+	 fimpara
+   fimpara
+
+   media<- t/D
+
+   escreva ("VocÃª digitou: ", D,"  nÃºmeros pares, a mÃ©dia deles Ã©: ", media)
+fimalgoritmo
